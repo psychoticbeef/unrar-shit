@@ -97,7 +97,9 @@ class DoThings {
 
 }
 
+$running = '/Volumes/Users/serve/.running';
 $incoming = '/Volumes/Users/serve/incoming/';
+if (file_exists($running)) exit;
 $files = glob($incoming . '*');
 $dt = new DoThings();
 $dt->process($files);
