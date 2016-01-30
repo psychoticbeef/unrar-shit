@@ -24,7 +24,7 @@ class DoThings {
 
 	private function unpack_file($file) {
 		echo 'Doing file ' . $file . PHP_EOL;
-		exec('unrar e ' . escapeshellarg($file) . ' ' . $this->dir_processed, $output, $retvar);
+		exec('/usr/local/bin/unrar e ' . escapeshellarg($file) . ' ' . $this->dir_processed, $output, $retvar);
 		echo join(PHP_EOL, $output) . PHP_EOL;
 		return ($retvar === 0);
 	}
